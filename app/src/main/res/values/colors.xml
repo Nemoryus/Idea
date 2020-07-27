@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#8256E4</color>
+    <color name="colorNastartujToRed">#ff1a55</color>
+    <color name="colorWith">#ffff</color>
+    <color name="colorBlack">#000000</color>
+<!--    <color name="colorAccent">#1e88e5</color>-->
+<!--    <color name="colorAccentDark">#005cb2</color>-->
+<!--    <color name="colorAccentLight">#6ab7ff</color>-->
+    <color name="colorRipple">#33FFFFFF</color>
+    <color name="colorButtonPrimary">#d81b60</color>
+    <color name="colorButtonPrimaryDark">#a00037</color>
+    <color name="colorButtonPrimaryLight">#ff5c8d</color>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/colorWith">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:id="@+id/idLogo"
+                android:layout_width="166dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo_small" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

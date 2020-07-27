@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="example.javatpoint.com.optionmenu.User">
+
+    <item
+        android:id="@+id/category"
+        android:title="Categórie"
+        app:showAsAction="always"
+        android:textColor="@color/colorBlack"
+        android:enabled="false"/>
+
+    <item
+        android:id="@+id/categoryAll"
+        android:title="Všetko"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/categoryGastronomia"
+        android:title="Gastronómia"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/categoryEshop"
+        android:title="E-shop"
+        app:showAsAction="never" />
+
+    <item
+    android:id="@+id/categorySluzby"
+    android:title="Služby"
+    app:showAsAction="never" />
+
+    <item
+        android:id="@+id/categoryStavebnictvo"
+        android:title="Stavebníctvo"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/categoryManualnapraca"
+        android:title="Manuáln práca"
+        app:showAsAction="never" />
+
+
+</menu>

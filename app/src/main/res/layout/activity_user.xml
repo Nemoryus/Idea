@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".User">
+
+        <LinearLayout
+            android:id="@+id/idLinearLayoutUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/bar_layout"/>
+
+                <View android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/toolbar_dropshadow"/>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/toolbar">
+
+                        <LinearLayout
+                            android:id="@+id/idLinearLayoutData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity = "center"
+                            android:layout_marginRight="32dp"
+                            android:layout_marginLeft="32dp">
+                        </LinearLayout>
+                </ScrollView>
+        </LinearLayout>
+</RelativeLayout>
