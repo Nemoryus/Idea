@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,8 +50,8 @@ public class  Login extends AppCompatActivity {
                     auth.signInWithEmailAndPassword(txtEmail,txtPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            boolean anoNie = task.isSuccessful();
-                             if(task.isSuccessful() || txtEmail.equals("errorsvk@gmail.com")){
+                            boolean yesNo = task.isSuccessful();
+                             if(task.isSuccessful() && txtEmail.equals("errorsvk@gmail.com")){
                                 Intent mainActivity = new Intent(Login.this, Admin.class);
                                 mainActivity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(mainActivity);
@@ -89,4 +91,6 @@ public class  Login extends AppCompatActivity {
 //        });
 
     }
+
+
 }

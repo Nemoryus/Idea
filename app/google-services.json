@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "864022441124",
-    "firebase_url": "https://findidea-c3dcf.firebaseio.com",
-    "project_id": "findidea-c3dcf",
-    "storage_bucket": "findidea-c3dcf.appspot.com"
+    "project_number": "287380000754",
+    "firebase_url": "https://findidea-276c7.firebaseio.com",
+    "project_id": "findidea-276c7",
+    "storage_bucket": "findidea-276c7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:864022441124:android:10723b7be6729512770a31",
+        "mobilesdk_app_id": "1:287380000754:android:a0d0c297ccc98dd032256b",
         "android_client_info": {
           "package_name": "com.example.idea"
         }
       },
       "oauth_client": [
         {
-          "client_id": "864022441124-mp1sq070vk91d7e4dcn84gs6726tbk5q.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.idea",
-            "certificate_hash": "fa140b7aec39d387efebe94889d31dcff5a7c6a3"
-          }
-        },
-        {
-          "client_id": "864022441124-4dgahlnpcsta7fcv4rt7e0vl9625dvt4.apps.googleusercontent.com",
+          "client_id": "287380000754-f157r5ife9102fg7dv61eioqjgjnh0jm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA3w3JgkEhk9c_67hKD7NIMNVR3-UX9xms"
+          "current_key": "AIzaSyA6ABOd2iUK99lruj5Y-lqQqaQeHZT-nAE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "864022441124-4dgahlnpcsta7fcv4rt7e0vl9625dvt4.apps.googleusercontent.com",
+              "client_id": "287380000754-f157r5ife9102fg7dv61eioqjgjnh0jm.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -45,4 +37,4 @@
     }
   ],
   "configuration_version": "1"
-}
+}                                          

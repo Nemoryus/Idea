@@ -8,8 +8,8 @@
         android:id="@+id/category"
         android:title="Categórie"
         app:showAsAction="always"
-        android:textColor="@color/colorBlack"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:actionMenuTextColor="@drawable/disable_color"/>
 
     <item
         android:id="@+id/categoryAll"

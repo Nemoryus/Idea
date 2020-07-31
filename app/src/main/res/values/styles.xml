@@ -1,16 +1,13 @@
 <resources>
-
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:actionMenuTextColor">@color/colorBlack</item>
     </style>
 
     <style name="AppTheme.NoAction">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
+        <item name="actionMenuTextColor">@color/colorBlack</item>
     </style>
 
     <style name="BlueButton" parent="TextAppearance.AppCompat.Button">
