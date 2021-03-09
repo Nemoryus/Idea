@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoAction">
         <activity android:name=".Notification"></activity>
-        <activity android:name=".Admin" />
         <activity
             android:name=".Login"
             android:theme="@style/AppTheme.NoAction">
@@ -19,6 +18,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+                <activity android:name=".Admin" />
         <activity
             android:name=".Registration"
             android:theme="@style/AppTheme.NoAction" />

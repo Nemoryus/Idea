@@ -23,10 +23,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 
 public class Registration extends AppCompatActivity {
-    EditText userName,password,email;
-    Button registrationButton;
-    FirebaseAuth auth;
-    DatabaseReference reference;
+    private EditText userName,password,email;
+    private Button registrationButton;
+    private FirebaseAuth auth;
+    private DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +63,13 @@ public class Registration extends AppCompatActivity {
                 }else {
 
                     registration(txtUsername,txtEmail,txtPassword);
+                    userName.getText().clear();
+                    email.getText().clear();
+                    password.getText().clear();
 
                 }
+
+
             }
         });
     }
@@ -74,7 +79,6 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-
                     FirebaseUser firebaseUser = auth.getCurrentUser();
                     assert firebaseUser != null;
                     String userId = firebaseUser.getUid();
@@ -99,9 +103,11 @@ public class Registration extends AppCompatActivity {
                         }
                     });
 
+                    Toast.makeText(Registration.this, "Registration was successful",Toast.LENGTH_SHORT).show();
+
                 }else{
 
-                    Toast.makeText(Registration.this, "You can't registration woth this email or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Registration.this, "You can't registration whit this email or password", Toast.LENGTH_SHORT).show();
 
                 }
             }

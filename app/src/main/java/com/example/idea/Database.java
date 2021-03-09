@@ -23,6 +23,7 @@ class Database extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Ideas.db";
     private static final String DB_PATH_SUFFIX = "/databases/";
     private static SQLiteDatabase database;
+    private static SQLiteOpenHelper dbHelper;
     private static Database mInstance;
     private String tableName = "ideas";
     private String id = "id";
@@ -40,7 +41,6 @@ class Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
     }
 
     @Override
@@ -66,9 +66,7 @@ class Database extends SQLiteOpenHelper {
         return database;
     }
 
-
     private static void copyDataBase() {
-
         try {
             InputStream myInput = context.getAssets().open("databases/"+DATABASE_NAME);
 
@@ -165,7 +163,10 @@ class Database extends SQLiteOpenHelper {
     }
 
     public long addIdeaIntoDatabase(String aName, String aCategory, String aAuthor, String aBody) {
-        SQLiteDatabase database = this.getWritableDatabase();
+//        dbHelper = new Database(context);
+//        SQLiteDatabase checkDB = SQLiteDatabase.openDatabase(context.getApplicationInfo().dataDir + DB_PATH_SUFFIX
+//                + DATABASE_NAME, null,SQLiteDatabase.OPEN_READWRITE);
+        database = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
         contentValues.put(columnName, aName);
@@ -174,6 +175,8 @@ class Database extends SQLiteOpenHelper {
         contentValues.put(columnBody, aBody);
 
         long result = database.insert(tableName, null, contentValues);
+
+        database.close();
 
         return result;
     }

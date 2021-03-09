@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.res.ResourcesCompat;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class User extends AppCompatActivity {
     private LinearLayout dataLinearLayout;
@@ -166,4 +168,13 @@ public class User extends AppCompatActivity {
         imageView.setImageResource(resource);
         aLayout.addView(imageView);
     }
+
+    @Override
+    public void onBackPressed()
+        {
+            super.onBackPressed();
+            startActivity(new Intent(User.this, Login.class));
+            finish();
+
+        }
 }

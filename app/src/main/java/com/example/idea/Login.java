@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class  Login extends AppCompatActivity {
     private EditText password,email;
-    private Button loginButton, adminButton,userButton;
+    private Button loginButton,registerButton;
     private FirebaseAuth auth;
 
     @Override
@@ -31,12 +31,10 @@ public class  Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         auth = FirebaseAuth.getInstance();
-
         password = findViewById(R.id.password);
         email = findViewById(R.id.email);
         loginButton = findViewById(R.id.loginButton);
-//        adminButton = findViewById(R.id.adminButton);
-//        userButton = findViewById(R.id.userButton);
+        registerButton = findViewById(R.id.loginRegister);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,22 +71,14 @@ public class  Login extends AppCompatActivity {
             }
         });
 
-//        userButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent adminActivity = new Intent(Login.this, User.class);
-//                startActivity(adminActivity);
-//            }
-//        });
-//
-//
-//        adminButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent adminActivity = new Intent(Login.this, Admin.class);
-//                startActivity(adminActivity);
-//            }
-//        });
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent adminActivity = new Intent(Login.this, Registration.class);
+                startActivity(adminActivity);
+            }
+        });
+
 
     }
 

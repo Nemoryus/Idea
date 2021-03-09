@@ -21,6 +21,8 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 
 import java.io.PipedInputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import static androidx.core.app.NotificationCompat.PRIORITY_DEFAULT;
 
@@ -57,25 +59,35 @@ public class Admin extends AppCompatActivity {
                 String author = authorEditText.getText().toString().trim();
                 String body = bodyEditText.getText().toString().trim();
 
+                ArrayList<String> listOFCategories = new ArrayList<String>( Arrays.asList("Gastronomia", "E-shop", "Sluzby","Manualn praca","Stavebnictvo") );
+
                 if(!TextUtils.isEmpty(name) || !TextUtils.isEmpty(category) || !TextUtils.isEmpty(author)){
                     Database database = new Database( Admin.this);
+                    Boolean existCategory = false;
+                    for (String categoryFromList : listOFCategories) {
+                        if (categoryFromList.equals(category)) existCategory = true;
+                    }
 
-                    long result = database.addIdeaIntoDatabase(name,category,author,body);
+                    if (existCategory){
+                        long result = database.addIdeaIntoDatabase(name,category,author,body);
 
-                    authorEditText.setText("");
-                    categoryEditText.setText("");
-                    nameEditText.setText("");
-                    bodyEditText.setText("");
+                        authorEditText.setText("");
+                        categoryEditText.setText("");
+                        nameEditText.setText("");
+                        bodyEditText.setText("");
 
-                    if (result == -1){
-                        Toast.makeText(Admin.this,"Failed: "+result,Toast.LENGTH_SHORT).show();
+                        if (result == -1){
+                            Toast.makeText(Admin.this,"Failed: "+result,Toast.LENGTH_SHORT).show();
+                        }else{
+                            notification();
+                            Toast.makeText(Admin.this,"Saved",Toast.LENGTH_SHORT).show();
+                        }
                     }else{
-                        notification();
-                        Toast.makeText(Admin.this,"Saved",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Admin.this,"The specified category does not exist.",Toast.LENGTH_SHORT).show();
                     }
 
                 }else {
-                    Toast.makeText(Admin.this,"Vypln vsetko ty lenivy KOKOT!!!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Admin.this,"Fill everything!!!",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -98,4 +110,10 @@ public class Admin extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        startActivity(new Intent(Admin.this, Login.class));
+        finish();
+    }
 }
