@@ -1,6 +1,6 @@
 # Idea-Android/Java
 ## Popis
-Android aplikacia zamerana na podnikatelske napady
+Android aplikacia zamerana na databazu podnikatelske napady.
 
 Pre prihlasenie do admin sekcie:
   meno: errorsvk@gmail.com
