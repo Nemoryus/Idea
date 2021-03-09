@@ -1,5 +1,5 @@
 # Idea-Android/Java
-##Popis
+## Popis
 Android aplikacia zamerana na podnikatelske napady
 
 Pre prihlasenie do admin sekcie:
